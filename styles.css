@@ -227,15 +227,191 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  main {
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow: visible;
+  }
+
+  .container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Header responsive */
+  header {
+    padding: 15px 0;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
   .nav-links {
     display: none;
   }
 
+  /* Main content responsive */
   main {
     grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  /* Services grid responsive */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Footer responsive */
+  footer {
+    flex-direction: column;
     gap: 20px;
     text-align: center;
+    padding: 25px 0;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-item {
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Header extra small */
+  .logo {
+    font-size: 18px;
+  }
+
+  /* Hero section extra small */
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Services extra small */
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-icon {
+    font-size: 1.8rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.8rem;
+  }
+
+  /* Coming soon badge responsive */
+  .coming-soon-badge {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+
+  /* Footer extra small */
+  footer {
+    padding: 20px 0;
+  }
+
+  .contact-item {
+    font-size: 0.85rem;
+  }
+
+  .social-links {
+    gap: 20px;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 15px 0;
+  }
+
+  .hero-content {
+    text-align: left;
   }
 
   .hero-content h1 {
@@ -243,19 +419,60 @@ footer {
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  footer {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .contact-info {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  .cta-button {
+    min-height: 44px;
+  }
+
+  .service-card {
+    min-height: 120px;
+  }
+
+  .social-links a {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile menu toggle (for future enhancement) */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #4fc3f7;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+/* Improved mobile interactions */
+.service-card.coming-soon {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Better mobile typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
