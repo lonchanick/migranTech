@@ -510,3 +510,10 @@ footer {
 .service-card:nth-child(4) {
   animation-delay: 0.4s;
 }
+
+
+.inactive-icon {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
